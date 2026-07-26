@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkIcon = document.getElementById('theme-toggle-dark-icon');
     const lightIcon = document.getElementById('theme-toggle-light-icon');
 
-    // Check saved theme or system preference
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    // Check saved theme (Default is Light Mode unless explicitly set to 'dark')
+    if (localStorage.getItem('color-theme') === 'dark') {
         document.documentElement.classList.add('dark');
         if (lightIcon) lightIcon.classList.remove('hidden');
     } else {
