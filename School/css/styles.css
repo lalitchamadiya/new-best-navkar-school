@@ -70,6 +70,13 @@ h1, h2, h3, .font-heading {
   border: 1px solid var(--card-glass-border);
   box-shadow: var(--glass-shadow);
   border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.glass-panel h1, .glass-panel h2, .glass-panel h3, .glass-panel h4, .glass-panel p, .glass-panel span {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .glass-nav {
